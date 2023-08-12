@@ -88,12 +88,76 @@ body {
   box-shadow: 1px 2px 2px 1px rgb(23, 21, 21);
 }
 
-.user__info__img > img {
-  width: 80px;
-}
+/* !! Parte de la informacion del usuario */
 
 .user__container {
   background-color: #ffffff;
   margin: 14px;
   box-shadow: 0 1rem 1.875rem -0.625rem rgba(70,96,187,.2);
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user__info {
+  display: flex;
+}
+
+.user__info__img {
+  width: 60%;
+  margin: 8px;
+}
+
+.user_info__personal {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.user__info__list {
+  width: 30px;
+}
+
+.user__info__list__name {
+  font-size: 22px;
+  font-weight: 600;
+  width: 20px;
+  padding-bottom: 8px;
+}
+
+.user__info__list__login {
+  font-weight: 200;
+  padding-bottom: 8px;
+}
+
+.user__info__list__time {
+  padding-top: 6px;
+}
+
+.user__info__list__time__span {
+  gap: 3rem;
+}
+
+.user__bio__git{
+  padding: 15px;
+  line-height: 25px;
+  line-break: anywhere;
+}
+
+.container__user__data__git {
+  background-color: red;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+}
+
+.user__data__git {
+  background-color: rebeccapurple;
+  
 }

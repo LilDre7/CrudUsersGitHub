@@ -34,6 +34,14 @@ const SearchUser = () => {
       });
   };
 
+  // Cambiar el dato de una fechas
+  const date = new Date(userGit.created_at);
+  const dateFormated = date.toLocaleDateString("en-us", {
+    day: "numeric",
+    year: "numeric",
+    month: "short",
+  });
+
   return (
     <>
       <form className="search__container" onSubmit={handleSubmit}>
@@ -55,29 +63,38 @@ const SearchUser = () => {
         <div className="user__info">
           <div className="user__info__img">
             <Avatar
-              sx={{ width: 100, height: 100 }}
+              sx={{ width: 80, height: 80 }}
               alt="Remy Sharp"
+              className="user__info__img"
               src={userGit.avatar_url}
             />
           </div>
 
           <ul className="user_info__personal">
-            <li className="user__info__"> {userGit.login} </li>
+            <li className="user__info__list__name">{userGit.name}</li>
             <a href={userGit.html_url} className="user__info__">
-              <li className="user__info__">{userGit.html_url}</li>
+              <li className="user__info__list__login">@{userGit.login} </li>
             </a>
-            <li className="user__info__">{userGit.created_at}</li>
-            <li className="user__info__">{userGit.updated_at}</li>
+            <time class="user__info__list__time">
+              <span className="user__info__list__time__span">Joined </span>
+              {
+                // Cambiar el dato de una fechas
+                dateFormated
+              }
+            </time>
           </ul>
         </div>
 
-        <div>
+        <div className="user__bio__git">
           <p>
             {userGit.bio
               ? userGit.bio
               : "No hay información sobre este usuario"}
           </p>
-          <div>
+        </div>
+
+        <div className="container__user__data__git">
+          <div className="user__data__git">
             <p>Repositorios:</p>
             <span>
               {userGit.public_repos
