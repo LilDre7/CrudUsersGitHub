@@ -1,3 +1,4 @@
+import { Avatar } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -53,7 +54,11 @@ const SearchUser = () => {
       <section className="user__container">
         <div className="user__info">
           <div className="user__info__img">
-            <Avatar alt="Remy Sharp" src={userGit.avatar_url} />
+            <Avatar
+              sx={{ width: 100, height: 100 }}
+              alt="Remy Sharp"
+              src={userGit.avatar_url}
+            />
           </div>
 
           <ul className="user_info__personal">

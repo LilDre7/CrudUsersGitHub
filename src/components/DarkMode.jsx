@@ -10,18 +10,16 @@ const DarkMode = () => {
   };
 
   return (
-    <>
-      <div className={`App ${darkMode ? "dark" : "light"} `}>
-        <div className="header__container">
-          <Header />
-          <button className="header__button" onClick={handleDarkMode}>
-            {darkMode ? "DARK" : "LIGHT"}
-            <i className="bx bx-sun"></i>
-          </button>
-        </div>
-        <SearchUser />
+    <div className={`container__App ${darkMode ? "dark" : "light"} `}>
+      <div className="header__container">
+        <Header />
+        <button className="header__button" onClick={handleDarkMode}>
+          {darkMode ? "DARK" : "LIGHT"}
+          <i className="bx bx-sun"></i>
+        </button>
       </div>
-    </>
+      <SearchUser />
+    </div>
   );
 };
 
