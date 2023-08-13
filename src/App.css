@@ -14,7 +14,7 @@ body {
 
 .dark {
   background-color: #141d2e;
-  color: #f5f7ff;
+  color: #fff7f7;
 }
 
 .light {
@@ -29,7 +29,7 @@ body {
   align-items: center;
 }
 
-.header__button{
+.header__button {
   background-color: transparent;
   outline-color: transparent;
   border: none;
@@ -145,19 +145,75 @@ body {
   line-break: anywhere;
 }
 
-.container__user__data__git {
-  background-color: red;
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."
-    ". . ."; 
+.user__data__git {
+  background-color: #f5f7ff;
+  margin: 10px;
+  gap: 10px;
+  border-radius: 7px;
 }
 
-.user__data__git {
-  background-color: rebeccapurple;
-  
+.user__data__git__title {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 7px;
+}
+
+.user__data__git__number {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  font-size: 18px;
+  gap: 40px;
+  padding-bottom: 8px;
+}
+
+/* Estilos para la social */
+
+/* Estilos para la lista de redes sociales */
+.user__info__social_git {
+  margin-top: 20px;
+}
+
+.user__info__social_git__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.user__info__social_git__list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.user__info__social_git__list li {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los íconos */
+.user__info__social_git__list li i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Estilos para los textos */
+.user__info__social_git__list li span {
+  font-size: 14px;
+}
+
+/* Estilos para el enlace del perfil */
+.user__info__social_git__list  {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.user__info__social_git__list a.user__info__:hover {
+  background-color: #555;
 }

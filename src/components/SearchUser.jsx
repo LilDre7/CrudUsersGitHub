@@ -2,7 +2,7 @@ import { Avatar } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const SearchUser = () => {
+const SearchUser = ({ darkMode }) => {
   const [userGit, setUserGit] = useState([]);
 
   const linkApi = "https://api.github.com/users/lilDre7";
@@ -44,7 +44,10 @@ const SearchUser = () => {
 
   return (
     <>
-      <form className="search__container" onSubmit={handleSubmit}>
+      <form
+        className={`search__container ${darkMode ? "darkForm" : "ligthForm"} `}
+        onSubmit={handleSubmit}
+      >
         <i className="bx bx-search-alt"></i>
         <input
           autoFocus
@@ -95,26 +98,29 @@ const SearchUser = () => {
 
         <div className="container__user__data__git">
           <div className="user__data__git">
-            <p>Repositorios:</p>
-            <span>
-              {userGit.public_repos
-                ? userGit.public_repos
-                : "No hay repositorios"}
-            </span>
-            <p>Followers:</p>
-            <span>
-              {userGit.followers ? userGit.followers : "No hay followers"}
-            </span>
-
-            <p>Following:</p>
-            <span>
-              {userGit.following ? userGit.following : "No hay following"}
-            </span>
+            <div className="user__data__git__title">
+              <h2>Repositorios</h2>
+              <h2>Followers</h2>
+              <h2>Following</h2>
+            </div>
+            <div className="user__data__git__number">
+              <span>
+                {userGit.public_repos
+                  ? userGit.public_repos
+                  : "No hay repositorios"}
+              </span>
+              <span>
+                {userGit.followers ? userGit.followers : "No hay followers"}
+              </span>
+              <span>
+                {userGit.following ? userGit.following : "No hay following"}
+              </span>
+            </div>
           </div>
         </div>
 
-        <div>
-          <ul>
+        <div className="user__info__social_git">
+          <ul className="user__info__social_git__list">
             <a href="">
               <li>
                 <i className="bx bx-current-location"></i>
@@ -144,7 +150,12 @@ const SearchUser = () => {
               </li>
             </a>
             <a href={userGit.html_url} className="user__info__">
-              <li className="user__info__">{userGit.html_url}</li>
+              <li>
+                <i className="bx bxl-github"></i>
+                <span>
+                  {userGit.html_url ? userGit.html_url : "Not available"}
+                </span>
+              </li>
             </a>
           </ul>
         </div>
