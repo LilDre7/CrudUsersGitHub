@@ -62,7 +62,9 @@ const SearchUser = ({ darkMode }) => {
         </button>
       </form>
 
-      <section className="user__container">
+      <section
+        className={`user__container ${darkMode ? "darkSec" : "lightSec"} `}
+      >
         <div className="user__info">
           <div className="user__info__img">
             <Avatar
@@ -119,7 +121,11 @@ const SearchUser = ({ darkMode }) => {
           </div>
         </div>
 
-        <div className="user__info__social_git">
+        <div
+          className={`user__info__social_git ${
+            darkMode ? "darkSocial" : "ligthSocial"
+          } `}
+        >
           <ul className="user__info__social_git__list">
             <a href="">
               <li>

@@ -18,7 +18,7 @@ const DarkMode = () => {
           <i className="bx bx-sun"></i>
         </button>
       </div>
-      <SearchUser darkMode={darkMode} handleDarkMode={handleDarkMode} />
+      <SearchUser darkMode={darkMode} />
     </div>
   );
 };
