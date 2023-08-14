@@ -7,17 +7,13 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Nunito', sans-serif;
-}
-
-.container__App {
-  color: rebeccapurple;
-  background-color: red;
+  font-family: 'Nunito', sans-serif; 
 }
 
 .dark {
   background-color: #141d2e;
   color: #fff7f7;
+  height: 100%;
 }
 
 .light {
@@ -40,11 +36,27 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.darkful {
+  background-color: red;
+  background: #304063;  
+  background: linear-gradient(to right, #304063, #304063, #304063);
+}
+
+.darkUl > a > li  {
+  color: white;
+}
+
+.container__App {
+  height: 100%;
+
+}
+
 .header__container{
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  height: 100%;
 }
 
 .header__button {
@@ -161,6 +173,7 @@ body {
   padding: 15px;
   line-height: 25px;
   line-break: anywhere;
+  margin-top: -32px;
 }
 
 .user__data__git {
@@ -168,12 +181,13 @@ body {
   margin: 10px;
   gap: 10px;
   border-radius: 7px;
+  box-shadow: 2px 2px 2px #a79e9e ;
 }
 
 .user__data__git__title {
   display: flex;
   justify-content: space-evenly;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   padding: 7px;
 }
@@ -200,6 +214,7 @@ body {
   display: flex;
   gap: 10px;
   flex-direction: column;
+  max-width: 300px;
 }
 
 .user__info__social_git__list a {
@@ -210,11 +225,12 @@ body {
 .user__info__social_git__list li {
   display: flex;
   align-items: center;
+  padding-top: 8px;
 }
 
 /* Estilos para los íconos */
 .user__info__social_git__list li i {
-  font-size: 20px;
+  font-size: 23px;
   margin-right: 5px;
 }
 

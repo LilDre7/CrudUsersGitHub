@@ -99,7 +99,9 @@ const SearchUser = ({ darkMode }) => {
         </div>
 
         <div className="container__user__data__git">
-          <div className="user__data__git">
+          <div
+            className={`user__data__git ${darkMode ? "darkful" : "ligthful"} `}
+          >
             <div className="user__data__git__title">
               <h2>Repositorios</h2>
               <h2>Followers</h2>
@@ -126,7 +128,11 @@ const SearchUser = ({ darkMode }) => {
             darkMode ? "darkSocial" : "ligthSocial"
           } `}
         >
-          <ul className="user__info__social_git__list">
+          <ul
+            className={`user__info__social_git__list ${
+              darkMode ? "darkUl" : "ligthUl"
+            } `}
+          >
             <a href="">
               <li>
                 <i className="bx bx-current-location"></i>

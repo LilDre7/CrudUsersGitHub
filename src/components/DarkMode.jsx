@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import SearchUser from "./SearchUser";
+import Footer from "./Footer";
 
 const DarkMode = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,6 +20,7 @@ const DarkMode = () => {
         </button>
       </div>
       <SearchUser darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </div>
   );
 };
