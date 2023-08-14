@@ -1,14 +1,18 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
     <>
-      <div>
+      <div
+        className={`footer__container ${
+          darkMode ? "dark__footer" : "ligth__footer"
+        } `}
+      >
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-          assumenda animi mollitia autem quas delectus error vitae deserunt
-          repellendus voluptatem. Aut repellendus at fuga modi assumenda odit
-          voluptatibus quam odio!
+          Challengue by Frontend Mentor. Coded by
+          <a href="https://github.com/LilDre7">
+            <span>Lil dree</span>
+          </a>
         </p>
       </div>
     </>

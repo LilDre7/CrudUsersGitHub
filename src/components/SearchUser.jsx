@@ -80,7 +80,7 @@ const SearchUser = ({ darkMode }) => {
             <a href={userGit.html_url} className="user__info__">
               <li className="user__info__list__login">@{userGit.login} </li>
             </a>
-            <time class="user__info__list__time">
+            <time className="user__info__list__time">
               <span className="user__info__list__time__span">Joined </span>
               {
                 // Cambiar el dato de una fechas
