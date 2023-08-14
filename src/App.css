@@ -69,8 +69,6 @@ body {
   border: none;
   font-size: 17px;
   align-items: center;
-  display: flex;
-  align-items: center;
 }
 
 .bx {
@@ -87,16 +85,23 @@ body {
 .search__container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 14px;
   padding: 14px;
-  margin:14px;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 1rem 1.875rem -0.625rem rgba(70,96,187,.2);
 }
 
-.bx-search-alt {
-  padding-right: 10px;
+.search__container > i {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search__container > input {
+  display: flex;
 }
 
 .search__input {
@@ -109,17 +114,19 @@ body {
 
 .search__input::placeholder {
   color: black;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .search__button {
-  margin-right: 20px;
-  padding: 6px;
-  border-radius: 4px;
-  background-color: rgb(92, 108, 255);
-  color: white;
+  background-color: #07f;
   border: none;
-  box-shadow: 1px 2px 2px 1px rgb(23, 21, 21);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  position: absolute;
+  right: 0.8rem;
 }
 
 /* !! Parte de la informacion del usuario */
@@ -156,7 +163,7 @@ body {
 .user__info__list__name {
   font-size: 22px;
   font-weight: 600;
-  width: 20px;
+  width: 100%;
   padding-bottom: 8px;
 }
 
@@ -352,4 +359,46 @@ body {
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   margin-left: -1px;
   color: white;
+}
+
+/* Responsive desing */
+@media (min-width: 500px) {
+  .user__info__list__name { 
+    font-size: 22px;
+  }
+  .user__bio__git > p {
+    font-size: 20px;
+  }
+  .user__data__git__title {
+    font-size: 16px;
+  }
+  .user__data__git__number{
+    font-size: 18px;
+  }
+  .container__App {
+    margin: 0 auto;
+  }
+  .search__container {
+    margin: 0 auto;
+    max-width: 580px;
+    margin-top: 1rem;
+  }
+  .user__container {
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .search__container {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-top: 1rem;
+  }
+  .user__container {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-top: 1rem;
+  }
 }

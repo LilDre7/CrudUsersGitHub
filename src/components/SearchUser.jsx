@@ -48,15 +48,16 @@ const SearchUser = ({ darkMode }) => {
         className={`search__container ${darkMode ? "darkForm" : "ligthForm"} `}
         onSubmit={handleSubmit}
       >
-        <i className="bx bx-search-alt"></i>
-        <input
-          autoFocus
-          className="search__input"
-          type="text"
-          name="search"
-          id="search"
-          placeholder="Search"
-        />
+        <i className="bx bx-search-alt">
+          <input
+            autoFocus
+            className="search__input"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search Github User"
+          />
+        </i>
         <button className="search__button" type="submit">
           Search
         </button>
