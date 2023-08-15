@@ -20,9 +20,9 @@ const Nav = ({ darkMode }) => {
           isNav ? "open" : ""
         }`}
       >
-        <li>Inicio</li>
-        <li>Servicios</li>
-        <li>Acerca de</li>
+        <li>Lil Dre</li>
+        <li>Portafolio</li>
+        <li>LinkedIn</li>
         <li>Contacto</li>
       </ul>
     </div>

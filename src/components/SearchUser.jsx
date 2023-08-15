@@ -69,7 +69,7 @@ const SearchUser = ({ darkMode }) => {
         <div className="user__info">
           <div className="user__info__img">
             <Avatar
-              sx={{ width: 80, height: 80 }}
+              sx={{ width: 100, height: 100 }}
               alt="Remy Sharp"
               className="user__info__img"
               src={userGit.avatar_url}
@@ -136,9 +136,9 @@ const SearchUser = ({ darkMode }) => {
           >
             <a href="">
               <li>
-                <i className="bx bx-current-location"></i>
+                <i class="bx bx-location-plus"></i>
                 <span>
-                  {userGit.location ? userGit.location : "No hay información"}
+                  {userGit.location ? userGit.location : "Not available"}
                 </span>
               </li>
             </a>
